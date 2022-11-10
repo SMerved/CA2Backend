@@ -1,6 +1,8 @@
 package facades;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.nimbusds.jose.shaded.json.JSONObject;
 import dtos.ChuckDTO;
 import dtos.CombinedDTO;
 import dtos.CurrencyDTO;
@@ -10,15 +12,16 @@ import utils.HttpUtils;
 import java.io.IOException;
 
 public class CurrencyFetcher {
-    public static CurrencyDTO getCurrency() throws IOException {
 
-        String currency = HttpUtils.fetchData("https://api.chucknorris.io/jokes/random");
+    public static void main(String[] args) throws IOException {
+        getCurrency();
+    }
+    public static void getCurrency() throws IOException {
 
-        Gson gson = new Gson();
+        String currencies = HttpUtils.fetchData("https://api.apilayer.com/exchangerates_data/symbols");
 
-        ChuckDTO chuckDTO = gson.fromJson(chuck, ChuckDTO.class);
+        JsonObject symbols = new JSONObject(currencies);
 
 
-        return new currencyDTO;
     }
 }

@@ -20,12 +20,11 @@ public class Currency implements Serializable {
     public Currency() {
     }
 
-    private String dummyStr1;
-    private String dummyStr2;
+    private String abr;
+    private String full;
 
     public Currency(String dummyStr1, String dummyStr2) {
-        this.dummyStr1 = dummyStr1;
-        this.dummyStr2 = dummyStr2;
+
     }
 
     public Long getId() {
@@ -36,20 +35,20 @@ public class Currency implements Serializable {
         this.id = id;
     }
 
-    public String getDummyStr1() {
-        return dummyStr1;
+    public String getAbr() {
+        return abr;
     }
 
-    public void setDummyStr1(String dummyStr1) {
-        this.dummyStr1 = dummyStr1;
+    public void setAbr(String abr) {
+        this.abr = abr;
     }
 
-    public String getDummyStr2() {
-        return dummyStr2;
+    public String getFull() {
+        return full;
     }
 
-    public void setDummyStr2(String dummyStr2) {
-        this.dummyStr2 = dummyStr2;
+    public void setFull(String full) {
+        this.full = full;
     }
 
 }
