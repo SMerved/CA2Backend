@@ -14,14 +14,10 @@ import java.io.IOException;
 public class CurrencyFetcher {
 
     public static void main(String[] args) throws IOException {
-        getCurrency();
+
     }
     public static void getCurrency() throws IOException {
 
         String currencies = HttpUtils.fetchData("https://api.apilayer.com/exchangerates_data/symbols");
-
-        JsonObject symbols = new JSONObject(currencies);
-
-
     }
 }
